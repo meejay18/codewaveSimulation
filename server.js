@@ -240,9 +240,9 @@ app.get('/getAllstudentsWithRightJoin', (req, res) => {
       }
     })
   } catch (error) {
-    return res.status(200).json({
-      message: 'Successful',
-      data: data,
+    return res.status(500).json({
+      message: 'Error',
+      error: error.message,
     })
   }
 })
